@@ -67,6 +67,15 @@ namespace WebApplication13 {
         protected global::System.Web.UI.WebControls.Button Tab6;
         
         /// <summary>
+        /// Tab7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Tab7;
+        
+        /// <summary>
         /// MainView control.
         /// </summary>
         /// <remarks>
@@ -85,15 +94,6 @@ namespace WebApplication13 {
         protected global::System.Web.UI.WebControls.View View1;
         
         /// <summary>
-        /// DropDownList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
         /// EntityDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -101,24 +101,6 @@ namespace WebApplication13 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.EntityDataSource EntityDataSource1;
-        
-        /// <summary>
-        /// DropDownList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
-        
-        /// <summary>
-        /// DropDownList3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
         
         /// <summary>
         /// EntityDataSource4 control.
@@ -227,6 +209,42 @@ namespace WebApplication13 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View View3;
+        
+        /// <summary>
+        /// lbEvid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbEvid;
+        
+        /// <summary>
+        /// DetailsView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView2;
+        
+        /// <summary>
+        /// EntityDataSource8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.EntityDataSource EntityDataSource8;
+        
+        /// <summary>
+        /// View4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View View4;
         
         /// <summary>
         /// Label9 control.
@@ -355,13 +373,13 @@ namespace WebApplication13 {
         protected global::System.Web.UI.WebControls.Button Button5;
         
         /// <summary>
-        /// View4 control.
+        /// View5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View4;
+        protected global::System.Web.UI.WebControls.View View5;
         
         /// <summary>
         /// Label2 control.
@@ -526,13 +544,13 @@ namespace WebApplication13 {
         protected global::System.Web.UI.WebControls.Button iiclosebtn;
         
         /// <summary>
-        /// View5 control.
+        /// View6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View5;
+        protected global::System.Web.UI.WebControls.View View6;
         
         /// <summary>
         /// Label18 control.
@@ -697,13 +715,13 @@ namespace WebApplication13 {
         protected global::System.Web.UI.WebControls.Button iclosebtn;
         
         /// <summary>
-        /// View6 control.
+        /// View7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View6;
+        protected global::System.Web.UI.WebControls.View View7;
         
         /// <summary>
         /// Label14 control.

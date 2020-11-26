@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="WebApplication13.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="WebApplication13.WebForm4" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -102,24 +102,26 @@
         .auto-style2 {
             width: 360px;
         }
-    </style>
+        </style>
     <body>
 
         <table width="80%" align="center">
             <tr>
                 <td>
-                    <asp:Button Text="Case Details" BorderStyle="solid" ID="Tab1" CssClass="Initial" runat="server"
+                    <asp:Button Text="Case Details" BorderStyle="None" ID="Tab1" CssClass="Initial" runat="server"
                         OnClick="Tab1_Click" />
                     <asp:Button Text="Reallocate" BorderStyle="None" ID="Tab2" CssClass="Initial" runat="server"
                         OnClick="Tab2_Click" />
-                    <asp:Button Text="Request Information" BorderStyle="None" ID="Tab3" CssClass="Initial" runat="server"
+                      <asp:Button Text="Evidence Details" BorderStyle="None" ID="Tab3" CssClass="Initial" runat="server"
                         OnClick="Tab3_Click" />
-                    <asp:Button Text="Interview Request" BorderStyle="None" ID="Tab4" CssClass="Initial" runat="server"
+                    <asp:Button Text="Request Information" BorderStyle="None" ID="Tab4" CssClass="Initial" runat="server"
                         OnClick="Tab4_Click" />
-                    <asp:Button Text="Interview " BorderStyle="None" ID="Tab5" CssClass="Initial" runat="server"
+                    <asp:Button Text="Interview Request" BorderStyle="None" ID="Tab5" CssClass="Initial" runat="server"
                         OnClick="Tab5_Click" />
-                    <asp:Button Text="Termination Request" BorderStyle="None" ID="Tab6" CssClass="Initial" runat="server"
+                    <asp:Button Text="Interview " BorderStyle="None" ID="Tab6" CssClass="Initial" runat="server"
                         OnClick="Tab6_Click" />
+                    <asp:Button Text="Termination Request" BorderStyle="None" ID="Tab7" CssClass="Initial" runat="server"
+                        OnClick="Tab7_Click" />
                     <asp:MultiView ID="MainView" runat="server">
                         <asp:View ID="View1" runat="server">
                             <table class="groove">
@@ -127,13 +129,8 @@
                                     <td>
                                         <h3>
                                             <span>
-                                                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="EntityDataSource1" DataTextField="Case_Type" DataValueField="C_Case_Type_ID"></asp:DropDownList>
                                                 <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="CaseTypes"></asp:EntityDataSource>
                                                 <br />
-                                                <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="EntityDataSource4" DataTextField="Case_Status1" DataValueField="Case_Status_ID">
-                                                </asp:DropDownList>
-                                                <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="EntityDataSource5" DataTextField="Case_Verdict1" DataValueField="Case_Verdict_ID">
-                                                </asp:DropDownList>
                                                 <asp:EntityDataSource ID="EntityDataSource4" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="Case_Status">
                                                 </asp:EntityDataSource>
                                                 <asp:EntityDataSource ID="EntityDataSource5" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="Case_Verdicts">
@@ -142,9 +139,11 @@
 
                                                 <table style="width: 100%;">
                                                     <tr>
-                                                        <td>&nbsp;</td>
+                                                        <td><span>
+                                                            <asp:Button ID="Button6" runat="server" class="button button2"  OnClick="Button1_Click" Text="Close" />
+                                                            </span></td>
                                                         <td>
-                                                            <asp:Button ID="Button6" runat="server" class="button button2" OnClick="Button1_Click" Text="Close" /></td>
+                                                            &nbsp;</td>
 
                                                     </tr>
                                                     <tr>
@@ -206,9 +205,11 @@
 
                                                     </tr>
                                                     <tr>
-                                                        <td>&nbsp;</td>
+                                                        <td><span>
+                                                            <asp:Button ID="Button7" runat="server" class="button button2" Text="Save Changes" />
+                                                            </span></td>
                                                         <td>
-                                                            <asp:Button ID="Button7" runat="server" class="button button2" Text="Save Changes" /></td>
+                                                            &nbsp;</td>
 
                                                     </tr>
                                                 </table>
@@ -224,6 +225,8 @@
        <asp:EntityDataSource ID="EntityDataSource3" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="Case_Status"></asp:EntityDataSource>
 
                                             </span>
+                                            <h3></h3>
+                                            <h3></h3>
                                             <h3></h3>
                                             <h3></h3>
                                         </h3>
@@ -254,8 +257,70 @@
                                     <td>
                                         <h3>
                                       
+                                                <h3 style="color: #051e80">Evidnece Details  </h3>
+                                            
+                                            <table style="width: 100%;">
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                 
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                         <div id="detailsPane2" >
+                                                                <br />
+                                                                Details of case number: 
+            <asp:Label ID="lbEvid" runat="server" Text=""></asp:Label>
+                                                        <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Evidence_ID" DataSourceID="EntityDataSource8" AllowPaging="True">
+                                                            <Fields>
+                                                                <asp:BoundField DataField="Evidence_ID" HeaderText="Evidence_ID" ReadOnly="True" SortExpression="Evidence_ID" />
+                                                                <asp:BoundField DataField="Evidence_Type" HeaderText="Evidence_Type" SortExpression="Evidence_Type" />
+                                                                <asp:BoundField DataField="Evidence_Date" HeaderText="Evidence_Date" SortExpression="Evidence_Date" />
+                                                                <asp:BoundField DataField="Evidence_Details" HeaderText="Evidence_Details" SortExpression="Evidence_Details" />
+                                                                <asp:BoundField DataField="Requester_ID" HeaderText="Requester_ID" SortExpression="Requester_ID" />
+                                                                <asp:BoundField DataField="Case_Handler_ID" HeaderText="Case_Handler_ID" SortExpression="Case_Handler_ID" />
+                                                                <asp:BoundField DataField="Case_ID" HeaderText="Case_ID" SortExpression="Case_ID" />
+                                                            </Fields>
+                                                        </asp:DetailsView>
+                                                        <asp:EntityDataSource ID="EntityDataSource8" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="Evidences"  Where="it.Case_ID=@idparam">
+                                                         <WhereParameters>
+                                                        <asp:ControlParameter ControlID="lbEvid" DbType="Int32" DefaultValue="1" Name="idparam" PropertyName="Text" />
+                                                    </WhereParameters>
+                                                            </asp:EntityDataSource>
+                                                             </div>
+                                                    </td>
+                                                 
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    
+                                                </tr>
+                                            </table>
+
+                                            <h3>
+
+                                            </h3>
+
+                                            <h3></h3>
+
+                                            <h3></h3>
+
+                                                <h3></h3>
+
+                                                <h3></h3>
+
+                                        </h3>
+                                    </td>
+                                </tr>
+                            </table>
+                        </asp:View>
+                        <asp:View ID="View4" runat="server">
+                            <table class="groove">
+                                <tr>
+                                    <td>
+                                        <h3>
+                                      
                                                 <h3 style="color: #051e80">Evidnece Request  </h3>
-                                                <table style="width: 100%;">
+                                               <table style="width: 100%;">
                                                     <tr>
                                                         <td class="auto-style2">
                                                             <asp:Label class="text" ID="Label9" runat="server" Text="Case Handler ID"></asp:Label>
@@ -357,7 +422,7 @@
                                 </tr>
                             </table>
                         </asp:View>
-                        <asp:View ID="View4" runat="server">
+                        <asp:View ID="View5" runat="server">
                             <table class="groove">
                                 <tr>
                                     <td>
@@ -504,7 +569,7 @@
                                 </tr>
                             </table>
                         </asp:View>
-                        <asp:View ID="View5" runat="server">
+                        <asp:View ID="View6" runat="server">
                             <table class="groove">
                                 <tr>
                                     <td>
@@ -653,7 +718,7 @@
                                 </tr>
                             </table>
                         </asp:View>
-                        <asp:View ID="View6" runat="server">
+                        <asp:View ID="View7" runat="server">
                             <table class="groove">
                                 <tr>
                                     <td>

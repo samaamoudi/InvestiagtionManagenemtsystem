@@ -3,6 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+      <asp:TextBox ID="SearchTextBox" runat="server" class="input" Width="418px"></asp:TextBox>
+     &nbsp;&nbsp;
+     <asp:Button ID="SearchButton" runat="server" Text="Search" CssClass="button button1" Height="49px" Width="161px" />
+
+            <asp:QueryExtender ID="QueryExtender2" runat="server" TargetControlID="EntityDataSource1">
+         <asp:SearchExpression SearchType="Contains" DataFields="Case_Status">
+            <asp:ControlParameter ControlID="SearchTextBox" />
+        </asp:SearchExpression>
+    </asp:QueryExtender>
+
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <Columns>
             <asp:BoundField DataField="Case_ID" HeaderText="Case_ID" Visible="true" />
@@ -30,11 +41,11 @@
 
 
     
-    <asp:gridview runat="server" DataSourceID="EntityDataSource2"></asp:gridview>
+   <%-- <asp:gridview runat="server" DataSourceID="EntityDataSource2"></asp:gridview>
     <asp:entitydatasource ID="EntityDataSource2" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4"
         EnableFlattening="False" CommandText="select it.[case type], c.[Case_Start_Date], c.[Requester_ID],c. [Case_ID] from Investigation_management_systemEntities4
         as it inner join Investigation_management_systemEntities4.InvestigationCase1 as c on it.[Case_Type]=c.[case type]">
-    </asp:entitydatasource>
+    </asp:entitydatasource>--%>
 </asp:Content>
 <%--select it.[Case_ID],it.[Case_Type], it.[Case_Start_Date], it.[Requester_ID],c. [case type] from Investigation_management_systemEntities4
         as it inner join Investigation_management_systemEntities4.CaseType as c on it.[Case_Type]=c.[case type]"--%>

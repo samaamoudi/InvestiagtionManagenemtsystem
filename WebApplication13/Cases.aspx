@@ -124,7 +124,7 @@
      &nbsp;&nbsp;
      <asp:Button ID="SearchButton" runat="server" Text="Search" CssClass="button button1" Height="56px" Width="339px" />
 
-            <asp:QueryExtender ID="QueryExtender2" runat="server" TargetControlID="EntityDataSource1">
+            <asp:QueryExtender ID="QueryExtender2" runat="server" TargetControlID="EntityDataSource3">
          <asp:SearchExpression SearchType="Contains" DataFields="Case_Status">
             <asp:ControlParameter ControlID="SearchTextBox" />
         </asp:SearchExpression>
@@ -136,7 +136,7 @@
 <%--</div>--%>
         <br />
         <br />
-     <div class="rounded_corners" style="width: 1000px">    
+  <%--   <div class="rounded_corners" style="width: 1000px">    
     <asp:GridView ID="GridView2" runat="server" HeaderStyle-BackColor="#A9A9A9" GridLines="None" style="width: 1000px" 
         HeaderStyle-ForeColor="White" RowStyle-BackColor="#DCDCDC" AlternatingRowStyle-BackColor="White" Height="208px" AutoGenerateColumns="False" DataSourceID="EntityDataSource1" Width="791px" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" DataKeyNames="Case_Type,Case_Status,Case_ID,Case_Start_Date,Case_Details,Employee_ID,Requester_ID,Case_Handler_ID" >
 <AlternatingRowStyle BackColor="White"></AlternatingRowStyle>
@@ -152,10 +152,30 @@
 <HeaderStyle BackColor="DarkGray" ForeColor="White"></HeaderStyle>
 
 <RowStyle BackColor="Gainsboro"></RowStyle>
-        </asp:GridView>
-         </div>
+        </asp:GridView>--%>
+       <%--  </div>--%>
         <br />
+     <div class="rounded_corners" style="width: 1000px">    
+    <asp:GridView ID="GridView3" runat="server" HeaderStyle-BackColor="#A9A9A9" GridLines="None" style="width: 1000px" 
+        HeaderStyle-ForeColor="White" RowStyle-BackColor="#DCDCDC" AlternatingRowStyle-BackColor="White" Height="208px" AutoGenerateColumns="False"  DataSourceID="EntityDataSource3"  Width="791px" OnSelectedIndexChanged="GridView3_SelectedIndexChanged" DataKeyNames="Case_Status,Case_ID,Case_Start_Date,Case_Details,Employee_ID,Case_Handler_ID,Requester_ID,Case_Type1">
+<AlternatingRowStyle BackColor="White"></AlternatingRowStyle>
 
+        <Columns>
+            <asp:BoundField DataField="Case_ID" HeaderText="Case_ID" ReadOnly="True" SortExpression="Case_ID" />
+            <asp:BoundField DataField="Case_Status" HeaderText="Case_Status" ReadOnly="True" SortExpression="Case_Status" />
+           <asp:BoundField DataField="Case_Type1" HeaderText="Case_Type1" ReadOnly="True" SortExpression="Case_Type1" />
+            <asp:BoundField DataField="Case_Start_Date" HeaderText="Case_Start_Date" ReadOnly="True" SortExpression="Case_Start_Date" />
+            <asp:BoundField DataField="Requester_ID" HeaderText="Requester_ID" ReadOnly="True" SortExpression="Requester_ID" />
+            <asp:CommandField ButtonType="Button" ControlStyle-CssClass="button button3" SelectText="Details" ShowSelectButton="True" />
+        </Columns>
+        <HeaderStyle BackColor="DarkGray" ForeColor="White"></HeaderStyle>
+
+<RowStyle BackColor="Gainsboro"></RowStyle>
+    </asp:GridView>
+
+          </div>
+    <asp:EntityDataSource ID="EntityDataSource3" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="View_3">
+    </asp:EntityDataSource>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="EntityDataSource2">
         <Columns>
             <asp:BoundField DataField="Case_ID" HeaderText="Case_ID" ReadOnly="True" SortExpression="Case_ID" />
@@ -163,8 +183,11 @@
             <asp:BoundField DataField="Case_Type" HeaderText="Case_Type" ReadOnly="True" SortExpression="Case_Type" />
             <asp:BoundField DataField="Case_Status" HeaderText="Case_Status" ReadOnly="True" SortExpression="Case_Status" />
             <asp:BoundField DataField="Requester_ID" HeaderText="Requester_ID" ReadOnly="True" SortExpression="Requester_ID" />
+            
         </Columns>
+        
         </asp:GridView>
+        
         <asp:EntityDataSource ID="EntityDataSource2" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="InvestigationCase1" Select="it.[Case_ID], it.[Case_Start_Date], it.[Case_Type], it.[Case_Status], it.[Requester_ID]">
         </asp:EntityDataSource>
 <br />

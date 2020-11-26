@@ -13,6 +13,8 @@ namespace WebApplication13
         {
             int id = int.Parse(Request.QueryString["CaseID"]);
             lpCaseID.Text = id.ToString();
+            //int evidid= int.Parse(Request.QueryString["CaseID"]);
+            lbEvid.Text = id.ToString();
 
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
@@ -40,6 +42,7 @@ namespace WebApplication13
             Tab4.CssClass = "Initial";
             Tab5.CssClass = "Initial";
             Tab6.CssClass = "Initial";
+            Tab7.CssClass = "Initial";
             MainView.ActiveViewIndex = 0;
         }
 
@@ -51,6 +54,7 @@ namespace WebApplication13
             Tab4.CssClass = "Initial";
             Tab5.CssClass = "Initial";
             Tab6.CssClass = "Initial";
+            Tab7.CssClass = "Initial";
             MainView.ActiveViewIndex = 1;
         }
 
@@ -62,6 +66,7 @@ namespace WebApplication13
             Tab4.CssClass = "Initial";
             Tab5.CssClass = "Initial";
             Tab6.CssClass = "Initial";
+            Tab7.CssClass = "Initial";
             MainView.ActiveViewIndex = 2;
         }
         protected void Tab4_Click(object sender, EventArgs e)
@@ -72,6 +77,7 @@ namespace WebApplication13
             Tab4.CssClass = "Clicked";
             Tab5.CssClass = "Initial";
             Tab6.CssClass = "Initial";
+            Tab7.CssClass = "Initial";
             MainView.ActiveViewIndex = 3;
 
         }
@@ -83,6 +89,7 @@ namespace WebApplication13
             Tab4.CssClass = "Initial";
             Tab5.CssClass = "Clicked";
             Tab6.CssClass = "Initial";
+            Tab7.CssClass = "Initial";
             MainView.ActiveViewIndex = 4;
         }
         protected void Tab6_Click(object sender, EventArgs e)
@@ -93,10 +100,22 @@ namespace WebApplication13
             Tab4.CssClass = "Initial";
             Tab5.CssClass = "Initial";
             Tab6.CssClass = "Clicked";
+            Tab7.CssClass = "Initial";
             MainView.ActiveViewIndex = 5;
         }
+        protected void Tab7_Click(object sender, EventArgs e)
+        {
+            Tab1.CssClass = "Initial";
+            Tab2.CssClass = "Initial";
+            Tab3.CssClass = "Initial";
+            Tab4.CssClass = "Initial";
+            Tab5.CssClass = "Initial";
+            Tab6.CssClass = "Initial";
+            Tab7.CssClass = "Clicked";
+            MainView.ActiveViewIndex = 6;
+        }
 
-      
+
 
         protected void trsavebtn_Click(object sender, EventArgs e)
         {
