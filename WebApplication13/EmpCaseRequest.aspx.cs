@@ -11,6 +11,22 @@ namespace WebApplication13
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+
+            if (IsPostBack)
+            //if the user clicked on the submit button, and the page is refreshing
+            {
+                Validate();
+
+                //if (Page.IsValid)
+                //{
+                //    successLabel.Text = "All Required Fields are Filled and Valid";
+                //}
+                //else
+                //{
+                //    successLabel.Text = "";
+                //}
+            }
 
         }
 

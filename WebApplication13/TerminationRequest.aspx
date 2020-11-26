@@ -87,6 +87,7 @@ border-color: #d9d9d9;
                 </td>
                 <td>
                     <asp:TextBox ID="Emptxt" runat="server" CssClass="input"></asp:TextBox>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="Emptxt" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
              
             </tr>
@@ -112,6 +113,8 @@ border-color: #d9d9d9;
                 <td>
                     <asp:TextBox ID="Casetxt" runat="server" class="input"></asp:TextBox>
             
+                    <asp:RequiredFieldValidator runat="server" ErrorMessage="*" ControlToValidate="Casetxt" ForeColor="Red"></asp:RequiredFieldValidator>
+            
                 </td>
                   
                   <tr>
@@ -134,6 +137,8 @@ border-color: #d9d9d9;
                 <td>
                     <asp:TextBox ID="Datetxt" runat="server" class="input" TextMode="Date"></asp:TextBox>
             
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Datetxt" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+            
                 </td>
                   
                   <tr>
@@ -155,6 +160,8 @@ border-color: #d9d9d9;
                 <td class="auto-style2"> <asp:Label class="text" ID="Label8" runat="server" Text="Termination Justification"></asp:Label></td>
                 <td>
                     <asp:TextBox ID="Justificationtxt" runat="server" class="input" TextMode="MultiLine"></asp:TextBox>
+            
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Justificationtxt" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             
                 </td>
                   
@@ -184,7 +191,7 @@ border-color: #d9d9d9;
                 <td>
                     <asp:Button ID="Button2" runat="server" Text="Save"  CssClass="button button2" OnClick="Button2_Click" />
                     &nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button3" runat="server" Text="Cancel" CssClass="button button3"  />
+                    <asp:Button ID="Button3" runat="server" Text="Cancel" CssClass="button button3" OnClick="Button3_Click"  />
 
                 </td>
                 

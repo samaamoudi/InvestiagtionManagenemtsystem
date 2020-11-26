@@ -96,7 +96,7 @@
     </asp:GridView>
         <asp:EntityDataSource ID="EntityDataSource3" runat="server" ConnectionString="name=Investigation_management_systemEntities4" DefaultContainerName="Investigation_management_systemEntities4" EnableFlattening="False" EntitySetName="View_5" Where="it.Case_Status=@nwparam" >
              <WhereParameters>
-                 <asp:ControlParameter ControlID="GridView3" DefaultValue="Reviewed" Name="nwparam" PropertyName="SelectedValue" DbType="String" />
+                 <asp:ControlParameter ControlID="GridView3" DefaultValue="" Name="nwparam" PropertyName="SelectedValue" DbType="String" />
              </WhereParameters>
         </asp:EntityDataSource>  
        

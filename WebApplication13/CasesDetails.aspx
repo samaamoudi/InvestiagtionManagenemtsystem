@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="CasesDetails.aspx.cs" Inherits="WebApplication13.CasesDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<%--</asp:Content>
+    <%--</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>--%>
  <style type="text/css">

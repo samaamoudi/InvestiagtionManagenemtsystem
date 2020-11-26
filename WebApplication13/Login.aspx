@@ -63,7 +63,7 @@ padding-top: 150px;
 
 <%--    <div class="login">--%>
         <%--<h4 color="#051e80">Login to Your Account </h4>--%>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" Text="Login to Your Account " ForeColor="#051E80" Font-Size="Large"></asp:Label>
         <br />
             <br />
@@ -73,15 +73,18 @@ padding-top: 150px;
             <br />
             <%--<input type="text" id="username" name="username">--%>
         <asp:TextBox ID="txtUserName" runat="server" maxlength="5" CssClass="input"/>
+            <br />
          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUserName"  ForeColor="Red" ErrorMessage="This Feild is required" Display="Dynamic"></asp:RequiredFieldValidator>
         <br />
          <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtUserName" Display="Dynamic" ErrorMessage="Please enter a valid employee ID" ForeColor="Red" ValidationExpression="^\d{5}$"></asp:RegularExpressionValidator>
-        <br />
+        &nbsp;<br />
             <label for="password">Password:</label>
             <br />
             <br />
            <%-- <input type="password" id="password" name="password">--%>
        <asp:TextBox ID="txtPWD" runat="server" TextMode="Password" CssClass="input"/>
+        
+                        <br />
         
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPWD" Display="Dynamic" ErrorMessage="This Feild is required"  ForeColor="Red"></asp:RequiredFieldValidator>
             
